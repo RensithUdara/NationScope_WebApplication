@@ -38,7 +38,7 @@ header .navbar-brand img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #ddddddd3;
 }
 
 .card-country-body {
