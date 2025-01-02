@@ -12,23 +12,24 @@
     <header class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="./img/logo.png" alt="logo" width="50" class="me-2">
+                <img src="./img/logo.png" alt="NationScope logo" width="50" class="me-2">
                 <span class="fs-4 fw-bold">NationScope</span>
             </a>
             <div class="ms-auto d-flex align-items-center">
-                <input class="form-control me-2" type="search" placeholder="Search countries..." id="txtSearch">
+                <input class="form-control me-2" type="search" placeholder="Search countries..." id="txtSearch" aria-label="Search countries">
                 <button class="btn btn-light" type="button" onclick="searchCountry()">Search</button>
             </div>
         </div>
     </header>
 
-    <!-- Filters -->
+    <!-- Filters Section -->
     <section class="filters bg-light py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-2">
+                    <label for="regionFilter" class="form-label">Region</label>
                     <select id="regionFilter" class="form-select" onchange="filterByRegion()">
-                        <option value="">Filter by Region</option>
+                        <option value="" selected>Filter by Region</option>
                         <option value="Africa">Africa</option>
                         <option value="Americas">Americas</option>
                         <option value="Asia">Asia</option>
@@ -37,8 +38,9 @@
                     </select>
                 </div>
                 <div class="col-md-6 mb-2">
+                    <label for="populationFilter" class="form-label">Population</label>
                     <select id="populationFilter" class="form-select" onchange="filterByPopulation()">
-                        <option value="">Filter by Population</option>
+                        <option value="" selected>Filter by Population</option>
                         <option value="low">Less than 1M</option>
                         <option value="medium">1M - 50M</option>
                         <option value="high">More than 50M</option>
@@ -51,54 +53,53 @@
     <!-- Main Content -->
     <main>
         <div class="container py-4">
-            <div class="row g-4" id="row"></div>
+            <div class="row g-4" id="row">
+                <!-- Dynamically populated content will appear here -->
+            </div>
         </div>
     </main>
 
-<!-- Footer -->
-<footer class="bg-dark text-light py-5">
-  <div class="container">
-      <div class="row">
-          <!-- About Section -->
-          <div class="col-md-4 mb-4">
-              <h5 class="fw-bold">About NationScope</h5>
-              <p>
-                  NationScope is your gateway to discovering countries around the world. Explore detailed information on population, geography, culture, and more.
-              </p>
-              <a href="https://rensithudara.github.io/portfolio/" class="btn btn-outline-light btn-sm mt-2">Visit My Portfolio</a>
-          </div>
-          
-          <!-- Quick Links -->
-          <div class="col-md-4 mb-4">
-              <h5 class="fw-bold">Quick Links</h5>
-              <ul class="list-unstyled">
-                  <li><a href="#regionFilter" class="text-light text-decoration-none">Filter by Region</a></li>
-                  <li><a href="#populationFilter" class="text-light text-decoration-none">Filter by Population</a></li>
-                  <li><a href="#row" class="text-light text-decoration-none">View All Countries</a></li>
-              </ul>
-          </div>
-          
-          <!-- Contact Section -->
-          <div class="col-md-4 mb-4">
-              <h5 class="fw-bold">Contact</h5>
-              <ul class="list-unstyled">
-                  <li><i class="bi bi-envelope-fill me-2"></i>Email: <a href="mailto:rensithudaragonalagoda@gmail.com" class="text-light text-decoration-none">rensithudaragonalagoda@gmail.com</a></li>
-                  <li><i class="bi bi-telephone-fill me-2"></i>Phone: <a href="tel:+94761155638" class="text-light text-decoration-none">+94 761 155 638</a></li>
-                  <li><i class="bi bi-geo-alt-fill me-2"></i>Location: Galle, Sri Lanka</li>
-              </ul>
-              <div class="social-links mt-3">
-                  <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
-                  <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
-                  <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
-                  <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
-              </div>
-          </div>
-      </div>
-      <hr class="bg-light">
-      <p class="text-center mb-0">© 2024 <a href="https://rensithudara.github.io/portfolio/" class="text-light fw-bold">Rensith Udara Gonalagoda</a> | All Rights Reserved.</p>
-  </div>
-</footer>
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">About NationScope</h5>
+                    <p>Discover countries worldwide with detailed insights on population, geography, and culture.</p>
+                    <a href="https://rensithudara.github.io/portfolio/" class="btn btn-outline-light btn-sm mt-2">Visit My Portfolio</a>
+                </div>
 
+                <!-- Quick Links -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#regionFilter" class="text-light text-decoration-none">Filter by Region</a></li>
+                        <li><a href="#populationFilter" class="text-light text-decoration-none">Filter by Population</a></li>
+                        <li><a href="#row" class="text-light text-decoration-none">View All Countries</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: <a href="mailto:rensithudaragonalagoda@gmail.com" class="text-light text-decoration-none">rensithudaragonalagoda@gmail.com</a></li>
+                        <li>Phone: <a href="tel:+94761155638" class="text-light text-decoration-none">+94 761 155 638</a></li>
+                        <li>Location: Galle, Sri Lanka</li>
+                    </ul>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <p class="text-center mb-0">© 2024 <a href="https://rensithudara.github.io/portfolio/" class="text-light fw-bold">Rensith Udara Gonalagoda</a> | All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
